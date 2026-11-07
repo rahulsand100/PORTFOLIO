@@ -3,6 +3,7 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionConfig } from "framer-motion";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Portfolio from "./components/Portfolio";
 import "./index.css";
 import "./components/SoftHero.css";
@@ -75,6 +76,7 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       {loading && <Loader />}
       <Portfolio />
+      <SpeedInsights />
     </MotionConfig>
   );
 }

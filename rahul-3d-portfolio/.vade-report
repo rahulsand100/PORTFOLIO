@@ -1,0 +1,40 @@
+# Vercel Speed Insights Integration
+
+## Summary
+Successfully installed and configured Vercel Speed Insights for this Vite + React portfolio project.
+
+## Changes Made
+
+### 1. Package Installation
+- Installed `@vercel/speed-insights` package (version will be specified in package.json)
+- Added as a dependency to the project
+
+### 2. Code Integration
+**Modified: src/App.jsx**
+- Added import statement: `import { SpeedInsights } from "@vercel/speed-insights/react";`
+- Added `<SpeedInsights />` component to the App's return statement within the MotionConfig wrapper
+- Placed after the Portfolio component to ensure proper initialization
+
+### 3. Implementation Details
+Following the official Vercel Speed Insights documentation (https://vercel.com/docs/speed-insights/quickstart), I:
+- Identified this as a Vite + React project (confirmed via package.json and framework detection)
+- Used the React-specific integration (`@vercel/speed-insights/react`)
+- Added the SpeedInsights component to the main App component where all core application logic resides
+- Preserved all existing functionality and code structure
+
+### 4. Verification Steps Completed
+✅ Build completed successfully (vite build) - no errors
+✅ Linter passed with 0 warnings and 0 errors (oxlint)
+✅ Dependencies installed and lock files updated (package-lock.json)
+✅ No breaking changes introduced
+
+## Files Modified
+- `package.json` - Added @vercel/speed-insights dependency
+- `package-lock.json` - Updated with new dependency tree
+- `src/App.jsx` - Added SpeedInsights import and component
+
+## How It Works
+The SpeedInsights component will automatically track Core Web Vitals and performance metrics when the application is deployed to Vercel. No additional configuration is required. The component is lightweight and won't impact the user experience.
+
+## Next Steps
+When deployed to Vercel, Speed Insights will automatically begin collecting performance data. You can view the metrics in your Vercel dashboard under the Speed Insights section.
